@@ -1,5 +1,0 @@
----
-title: "joelnc Github Page"
----
-
-Index page
