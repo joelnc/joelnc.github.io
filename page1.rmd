@@ -1,0 +1,9 @@
+---
+title: "Page 1"
+output: 
+    html_document:
+        theme: united
+---
+
+Some content.
+

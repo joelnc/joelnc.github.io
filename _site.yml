@@ -1,0 +1,10 @@
+name: "misc. stuff"
+navbar:
+  title: "dir of stuff"
+  left:
+    - text: "Page 1"
+      href: page1.html
+    - text: "Page 2"
+      href: page2.html
+    - text: "Page 3"
+      href: page3.html
