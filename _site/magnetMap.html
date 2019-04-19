@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Violet Zone ES Magnet Options</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Unofficial Stuff</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="magnetMap.html">Violet Zone ES Magnet Options</a>
+</li>
+<li>
+  <a href="longCreekV3.html">Long Creek TMDL Analysis</a>
+</li>
+<li>
+  <a href="geologyMap.html">NC Geology Map</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Violet Zone ES Magnet Options</h1>
+
+</div>
+
+
+<div id="options-map" class="section level1">
+<h1>Options Map</h1>
+<p>I just became aware of the CMS Magnet process and options for the upcoming lottery. As a parent of a Blythe Elem. 2nd grader, I was given a list of 13 schools that I could rank as choices for our child. (Note, this list of schools may vary based on student test scores or other factors. Don¡¯t assume these are your lottery options.)</p>
+<p>After bouncing around the web collecting information on the potential magnet options, I pulled together the visualization below. Basically, just a map of the schools, each hyperlinked with the school¡¯s website and some info from the NC School Report Cards website.</p>
+<p><strong>NOTE: This is a quick personal project, which you should not rely on for accurary or completeness. I don¡¯t work for or represent CMS in anyway. Any questions about the CMS Lottery process should be directed to CMS.</strong></p>
+<p><strong>Also, I haven¡¯t looked into how ¡°School Grades¡± or ¡°Growth Expectations¡± are determined. You should do your own research on their strengths and deficiencies before relying on them for anything.</strong></p>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<pre class="r"><code>rm(list=ls())
+library(leaflet)
+library(rmarkdown)
+library(dplyr)
+
+## load data
+ds &lt;- read.table(file=&quot;schoolData.csv&quot;, sep=&quot;,&quot;, row.names=NULL,
+                 stringsAsFactors=FALSE, header=TRUE)
+ds$grade.17 &lt;- paste(&quot;2017 Grade:&quot;, ds$grade.17)
+ds$growth17 &lt;- paste(&quot;2017 Growth:&quot;, ds$growth17)
+ds$links &lt;- paste0(&quot;&lt;a href=&#39;&quot;,ds$link,&quot;&#39;&gt;&quot;,ds$school,&quot;&lt;/a&gt;&quot;)
+ds$link2 &lt;- paste0(&quot;&lt;a href=&#39;&quot;,ds$link2,&quot;&#39;&gt;&quot;,
+                   &quot;School Report Cards Site&quot;,&quot;&lt;/a&gt;&quot;)
+
+ds$img &lt;- paste0(&quot;&lt;a href=&#39;&quot;,ds$img,&quot;.PNG&quot;,&quot;&#39;&gt;&quot;,
+                 &quot;Grades Excerpt&quot;,&quot;&lt;/a&gt;&quot;)
+
+p1 &lt;- leaflet(width=&quot;100%&quot;) %&gt;%
+    addProviderTiles(providers$OpenStreetMap.Mapnik) %&gt;%
+    setView(lng = -80.845, lat = 35.296, zoom = 11) %&gt;%
+    addMarkers(lng=ds$long, lat=ds$lat,
+               popup=paste(sep=&quot;&lt;br/&gt;&quot;, ds$links, ds$grade.17,
+                           ds$growth17, ds$img, ds$link2))
+
+p1</code></pre>
+<div id="htmlwidget-27494089476e4fcd8f36" style="width:100%;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27494089476e4fcd8f36">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[35.296383,35.377201,35.202022,35.335395,35.250176,35.237366,35.291294,35.297393,35.215357,35.349069,35.260711,35.285082,35.239327],[-80.844973,-80.835014,-80.875596,-80.7733,-80.941246,-80.850685,-80.945821,-80.776715,-80.824854,-80.890531,-80.857843,-80.733781,-80.864771],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<a href='http://schools.cms.k12.nc.us/statesvilleroadES/Pages/Default.aspx'>112 - IB at Statesville Road<\/a><br/>2017 Grade: C<br/>2017 Growth: Not Met<br/><a href='112grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600546&year=2017&lang=undefined'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/blytheES/Pages/Default.aspx'>125 - IB at Legette Blythe<\/a><br/>2017 Grade: C<br/>2017 Growth: Met<br/><a href='125grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600442&year=2017&lang=undefined'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/mariegdavisES/Pages/AboutOurSchool.aspx'>126 - IB at Marie G. Davis<\/a><br/>2017 Grade: Not Avail.<br/>2017 Growth: Not Avail.<br/><a href='126grades.PNG'>Grades Excerpt<\/a><br/><a href=''>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/mallardcreekES/Pages/Default.aspx'>170 - LI/TD at Mallard Creek<\/a><br/>2017 Grade: C<br/>2017 Growth: Not Met<br/><a href='170grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600446&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/tuckaseegeeES/Pages/Default.aspx'>173 - LI/TD at Tuckaseegee<\/a><br/>2017 Grade: D<br/>2017 Growth: Not Met<br/><a href='173grades.PNG'>Grades Excerpt<\/a><br/><a href=''>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/irwinacademiccenterES/Pages/Default.aspx'>174 - LI/TD at Irwin Academic Center<\/a><br/>2017 Grade: B<br/>2017 Growth: Met<br/><a href='174grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600571&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/pawcreekES/Pages/Default.aspx'>198 - Paw Creek Computer Science<\/a><br/>2017 Grade: C<br/>2017 Growth: Met<br/><a href='198grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600494&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/johnmotleymoreheadMS/Pages/Default.aspx'>199 - Governors Villge STEM Academy<\/a><br/>2017 Grade: B<br/>2017 Growth: Met<br/><a href='199grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600429&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/elizabethES/Pages/Default.aspx'>230 - Elizabeth Traditional<\/a><br/>2017 Grade: C<br/>2017 Growth: Not Met<br/><a href='230grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600384&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/longcreekES/Pages/Default.aspx'>239 - Long Creek Creative Arts<\/a><br/>2017 Grade: C<br/>2017 Growth: Met<br/><a href='239grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600444&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/universityparkES/Pages/default.aspx'>241 - University Park Creative Arts<\/a><br/>2017 Grade: C<br/>2017 Growth: Met<br/><a href='241grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600565&year=2017&lang=english'>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/dorothyjvaughanES/Pages/Default.aspx'>265 - Dorothy J. Vaughan Academy of Technology<\/a><br/>2017 Grade: Not Avail.<br/>2017 Growth: Not Avail.<br/><a href='265grades.PNG'>Grades Excerpt<\/a><br/><a href=''>School Report Cards Site<\/a>","<a href='http://schools.cms.k12.nc.us/brunsacademyES/Pages/Default.aspx'>276 - Bruns Environmental STEM<\/a><br/>2017 Grade: F<br/>2017 Growth: Met<br/><a href='276grades.PNG'>Grades Excerpt<\/a><br/><a href='https://ncreportcards.ondemand.sas.com/src/school?school=600489&year=2017&lang=english'>School Report Cards Site<\/a>"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[35.296,-80.845],11,[]],"limits":{"lat":[35.202022,35.377201],"lng":[-80.945821,-80.733781]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

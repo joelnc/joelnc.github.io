@@ -1,0 +1,29 @@
+---
+title: "NC Geology Map"
+output: 
+    html_document:
+        code_folding: hide
+---
+
+# Options Map
+I just became aware of the CMS Magnet process and options for the
+
+**NOTE: This is a quick personal project, which you should not rely on
+to CMS.**
+
+**Also, I haven¡¯t looked into how ¡°School Grades¡± or ¡°Growth
+strengths and deficiencies before relying on them for anything.**
+          
+## Data
+```{r}
+rm(list=ls())
+library(leaflet)
+library(rmarkdown)
+library(dplyr)
+library(viridis)
+
+## code here
+
+
+```
+        
