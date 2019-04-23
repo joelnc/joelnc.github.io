@@ -1,0 +1,5 @@
+1. Configure rmd files and index file to link togehter all the rmd
+   pages
+2. From this dir, run render_site() via rmarkdown
+3. Copy conents of resulting _site folder into joel.github.io folder
+4. Push changes to github
